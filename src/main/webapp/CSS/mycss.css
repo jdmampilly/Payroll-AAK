@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2019, 12:03:42 PM
+    Author     : joseph
+*/
+
+/* The sidebar menu */
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 120px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0px;
+    border-top: 5px;
+    border-right-style: ridge;
+    border-color: #f1f1f1;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000000;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #6666ff;
+    font-size: 17px;
+}
+.navbar {
+    height: 90px;
+    width: 100%;
+    background-color: appworkspace;
+    overflow: auto;
+    border-bottom-style: ridge
+       
+}
+/* Style page content */
+.main {
+    margin-left: 130px; 
+    padding: 0px 10px;
+}
+.content {
+    margin-left: 0px; 
+    padding: 0px 10px;
+}
+.center {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    font-size: small;
+    font-family: Tahoma;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(239,238,226,1);
+}
+
+.ui-widget {
+    font-size: small !important;
+    font-family: Tahoma !important;
+}
+
+.ui-widget .ui-widget {
+    font-size: small;
+    font-family: Tahoma;
+}
+
+.ui-state-active {
+    background: rgba(207,204,182,1) !important;
+}
+
+th {
+    background: rgba(235,231,213,1) !important;
+    white-space: nowrap;
+}
+
+td {
+    white-space: nowrap; 
+}
+
+table {
+    table-layout: auto !important;
+}
+
+.ui-widget-header {
+    background: rgba(117,7,32,1) !important;
+}
+
+.ui-tree .ui-state-hover {
+    background: rgba(117,7,32,1) !important;
+    color: white !important;
+}
+
+
+
+body {
+    width: 100%;    
+}
+
+required {
+    color: red !important;
+}
+
+.ui-tree {
+    width: auto !important;
+}
+
+.ui-datatable .ui-sortable-column-icon.ui-icon {
+    /*background-image: none; text-indent: 0; margin: 0 0 0 .5em;*/
+}
+
+.ui-treenode-label {
+    margin-top: 0px !important;
+    color: black;
+}
+
+.ui-treenode-label .ui-state-highlight {
+    background: green !important;
+}
+
+.ui-treenode-icon {
+    margin-top: 2px !important;
+    color: brown;
+}
+
+td {
+    color: black;
+}
+
+.ui-column-filter {
+    width: 70% !important;
+}
+
+.ui-paginator > span > span, .ui-paginator a span { display: none; }
+.ui-paginator-first:before { content: '<<'; } 
+.ui-paginator-prev:before { content: '<'; }
+.ui-paginator-next:before { content: '>'; }
+.ui-paginator-last:before { content: '>>'; }
+.ui-paginator .ui-state-disabled { opacity: .25; }
+
+.ui-widget-header {
+    text-shadow: none;
+    color: rgba(251,238,213,1);
+}
+
+.ui-button-text .ui-c {
+    font-size: smaller !important;
+}

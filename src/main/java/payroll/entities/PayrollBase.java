@@ -6,11 +6,14 @@
 package payroll.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -24,6 +27,10 @@ public abstract class PayrollBase implements PayrollFile, Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int id;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created_date")
+    private Date createdDate;
+
     @Override
     public int getId() {
         return id;
@@ -32,5 +39,15 @@ public abstract class PayrollBase implements PayrollFile, Serializable {
     @Override
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    @Override
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
     }
 }

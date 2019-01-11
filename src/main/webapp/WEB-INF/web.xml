@@ -50,7 +50,7 @@
     </session-timeout>
   </session-config>
   <welcome-file-list>
-    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>Index.xhtml</welcome-file>
   </welcome-file-list>
   <distributable />
 </web-app>

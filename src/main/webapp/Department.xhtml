@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="content">
+
+                <center>
+                    <h2> Department Master</h2>
+                </center>
+                <h:form id="form" enctype="multipart/form-data">
+                    <p:messages autoUpdate="true" showDetail="false" />
+                    <p:row style="border: none">
+                        <p:commandButton id="Add" value="Add Record" actionListener="#{departmentBean.onAddClick}" update=":form:item :form:buttons"    /> 
+                    </p:row>
+                    <!-- New Document -->
+                    <p:outputPanel id="item">
+                        <p:panelGrid style="margin-top: 5px; margin-bottom: 5px;"
+                                     rendered="#{departmentBean.showForm}">
+                            <p:row>
+                                <p:column>
+                                    <p:outputLabel value="Department Code" />
+                                    <p:inputText value="#{departmentBean.selectedDocument.departmentCode}" />
+                                </p:column> 
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <p:outputLabel value="Department Name" />
+                                    <p:inputText value="#{departmentBean.selectedDocument.departmentName}" />
+                                </p:column> 
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <p:outputLabel value="Division Code" />
+                                    <p:inputText value="#{departmentBean.selectedDocument.divisionCode}" />
+                                </p:column> 
+                            </p:row>
+                        </p:panelGrid>
+                    </p:outputPanel>
+                    <p:outputPanel id="buttons" >
+                        <p:commandButton 
+                            value="Save" update="@all" ajax="false"
+                            style="margin-bottom: 5px;"
+                            actionListener="#{departmentBean.onSaveClick}"
+                            rendered="#{departmentBean.showForm}" />
+                        <p:commandButton 
+                            value="Cancel" update=":form:item :form:buttons"
+                            style="margin-bottom: 5px;" immediate="true"
+                            actionListener="#{departmentBean.onCancelClick}"
+                            rendered="#{departmentBean.showForm}" />
+                    </p:outputPanel>
+                    <!-- List view --> 
+                    <p:outputPanel id="list">
+
+                        <p:dataTable id="dataTable" widgetVar="dataTable" var="item" 
+                                     value="#{departmentBean.list}"
+                                     paginator="true" paginatorPosition="bottom" rows="20"
+                                     style="margin-top: 5px" lazy="false">
+                            <p:column headerText="Edit" exportable="false">
+                                <p:commandLink title="Edit document" update=":form:buttons :form:item"
+                                               actionListener="#{departmentBean.onEditClick(event, item)}">
+                                    <span class="fa fa-edit"></span>
+                                </p:commandLink>
+                            </p:column>
+
+                            <p:column headerText="Name" sortBy="#{item.departmentCode}" filterBy="#{item.departmentCode}" filterMatchMode="contains">
+                                <h:outputText value="#{item.departmentCode}"/>
+                            </p:column>
+                            <p:column headerText="Name" sortBy="#{item.departmentName}" filterBy="#{item.departmentName}" filterMatchMode="contains">
+                                <h:outputText value="#{item.departmentName}"/>
+                            </p:column>
+                            <p:column headerText="Code" sortBy="#{item.divisionCode}" filterBy="#{item.divisionCode}" filterMatchMode="contains">
+                                <h:outputText value="#{item.divisionCode}"/>
+                            </p:column>
+                            <p:column headerText="Delete">
+                                <p:commandLink title="Delete item" update=":form:list"
+                                               actionListener="#{departmentBean.onDeleteClick(event, item)}">
+                                    <span class="fa fa-times"></span>
+                                    <p:confirm message="Delete Record: #{item.departmentCode}?" />
+                                </p:commandLink>
+                            </p:column>
+
+                        </p:dataTable>
+                    </p:outputPanel>
+                    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                        <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                    </p:confirmDialog>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

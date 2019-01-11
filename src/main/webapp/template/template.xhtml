@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="CSS/mycss.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+
+    <h:body>
+
+        <div class="navbar">
+            <div id="banner" class="ui-state-active ui-corner-all">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td id="banner_left">
+                                <a id="logo" href="#"><img id="banner_logo" src="images/mylogo_en.png" alt="banner logo" width="48" height="48" /></a>
+                            </td>
+                            <td id="banner_middle" class="center">
+                                <center>
+                                    <h1>Akbar Al Khaleej</h1>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="sidenav">
+            <h:form> 
+                <p:panelMenu id="menubar">
+                    <p:submenu label="Forms" style="font-size: small" expanded="true">
+                        <p:menuitem value="Home"   url="Index.xhtml" ajax="false"  style="font-size: small" icon="ui-icon-home" />
+                        <p:menuitem value="Division" url="Division.xhtml" ajax="false"  style="font-size: small" />
+                         <p:menuitem value="Department" url="Department.xhtml" ajax="false"  style="font-size: small" />
+                         <p:menuitem value="Employee" url="Department.xhtml" ajax="false"  style="font-size: small" />
+                    </p:submenu> 
+                </p:panelMenu>
+            </h:form>
+        </div>
+
+        <!-- Page content -->
+
+        <div id="content" style="margin-left: 130px">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+    </h:body>
+</html>

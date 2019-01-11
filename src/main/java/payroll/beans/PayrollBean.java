@@ -31,6 +31,11 @@ public abstract class PayrollBean implements Serializable {
         showForm = true;
     }
 
+    public void onAddClick() {
+
+        showForm = true;
+    }
+
     public void onEditClick(ActionEvent event, PayrollFile item) {
         selectedDocument = item;
         showForm = true;
@@ -38,7 +43,7 @@ public abstract class PayrollBean implements Serializable {
 
     public void onDeleteClick(ActionEvent event, PayrollFile item) {
         repo.delete(item);
-        //list.remove(item);
+        list.remove(item);
     }
 
     protected void resetState() {
@@ -56,6 +61,9 @@ public abstract class PayrollBean implements Serializable {
         } else {
             persistDocument();
         }
+        list.add(selectedDocument);
+        resetState();
+
     }
 
     private void persistDocument() {
@@ -64,7 +72,6 @@ public abstract class PayrollBean implements Serializable {
 
     private void updateDocument() {
         selectedDocument = repo.update(selectedDocument);
-        resetState();
     }
 
     public void onCancelClick(ActionEvent event) {

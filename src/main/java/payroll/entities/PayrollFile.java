@@ -5,6 +5,8 @@
  */
 package payroll.entities;
 
+import java.util.Date;
+
 /**
  *
  * @author JDM
@@ -13,7 +15,11 @@ public interface PayrollFile {
 
     public int getId();
 
+    public Date getCreatedDate();
+
     public void setId(int id);
+
+    public void setCreatedDate(Date createdDate);
 
     public PayrollFile copy();
 }

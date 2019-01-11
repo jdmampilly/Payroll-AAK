@@ -74,6 +74,7 @@ public class Division extends PayrollBase {
     @Override
     public Division copy() {
         Division d = new Division();
+      
         return d;
     }
 
