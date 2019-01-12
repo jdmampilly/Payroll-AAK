@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 4, 2017, 9:36:11 AM
+    Author     : jalalam
+*/
+
+body {
+    font-size: small;
+    font-family: Tahoma;
+    width: 95%;
+    margin: auto;
+    background-color: rgba(239,238,226,1);
+}
+
+.ui-widget {
+    font-size: small !important;
+    font-family: Tahoma !important;
+}
+
+.ui-widget .ui-widget {
+    font-size: small;
+    font-family: Tahoma;
+}
+
+.ui-state-active {
+    background: rgba(207,204,182,1) !important;
+}
+
+th {
+    background: rgba(235,231,213,1) !important;
+    white-space: nowrap;
+}
+
+td {
+     white-space: nowrap; 
+}
+
+table {
+    table-layout: auto !important;
+}
+
+.ui-widget-header {
+    background: rgba(117,7,32,1) !important;
+}
+
+.ui-tree .ui-state-hover {
+    background: rgba(117,7,32,1) !important;
+    color: white !important;
+}

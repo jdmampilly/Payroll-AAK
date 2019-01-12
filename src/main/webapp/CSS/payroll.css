@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 20, 2017, 7:57:44 AM
+    Author     : jalalam
+*/
+
+body {
+    width: 95%;    
+}
+
+required {
+  color: red !important;
+}
+
+.ui-tree {
+    width: auto !important;
+}
+
+.ui-datatable .ui-sortable-column-icon.ui-icon {
+    /*background-image: none; text-indent: 0; margin: 0 0 0 .5em;*/
+}
+
+.ui-treenode-label {
+    margin-top: 0px !important;
+    color: black;
+}
+
+.ui-treenode-label .ui-state-highlight {
+    background: green !important;
+}
+
+.ui-treenode-icon {
+    margin-top: 2px !important;
+    color: brown;
+}
+
+td {
+    color: black;
+}
+
+.ui-column-filter {
+    width: 70% !important;
+}
+/*
+.ui-paginator > span:before, .ui-sortable-column-icon:before {
+    font-family: FontAwesome; color: #fff;
+}
+*/
+.ui-paginator > span > span, .ui-paginator a span { display: none; }
+.ui-paginator-first:before { content: '<<'; } 
+.ui-paginator-prev:before { content: '<'; }
+.ui-paginator-next:before { content: '>'; }
+.ui-paginator-last:before { content: '>>'; }
+/*
+.ui-icon-carat-2-n-s:before { content: '\f0dc'; }
+.ui-icon-carat-2-n-s.ui-icon-triangle-1-n:before { content: '\f0de'; }
+.ui-icon-carat-2-n-s.ui-icon-triangle-1-s:before { content: '\f0dd'; }
+*/
+.ui-paginator .ui-state-disabled { opacity: .25; }
+
+.ui-widget-header {
+  text-shadow: none;
+  color: rgba(251,238,213,1);
+}
+
+.ui-button-text .ui-c {
+  font-size: smaller !important;
+}
